@@ -18,7 +18,7 @@
 
   <script> {% for object in categories %}
     document.getElementById("{{object.id}}").addEventListener("click", () => {
-      window.location = "http://localhost:3000/categories/{{object.id}}";
+      window.location = "/categories/{{object.id}}";
     });
     {% endfor %}
     </script>

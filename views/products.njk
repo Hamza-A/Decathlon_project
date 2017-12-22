@@ -9,7 +9,7 @@
       <h4 class="card-title">{{object.title}}</h4>
       <p class="card-text">{{object.decathlon_id}}</p>
       <p class="card-text">{{object.min_price}}€</p>
-      <a href="http://localhost:3000/products/{{object.id}}" class="btn btn-primary">Ajouter au panier</a>
+      <a href="/products/{{object.id}}" class="btn btn-primary">Ajouter au panier</a>
     </div>
   </div>
     {% endfor %}
@@ -17,7 +17,7 @@
 <script>
 {% for object in products %}
   document.getElementById("{{object.id}}").addEventListener("click", () => {
-    window.location = "http://localhost:3000/products/{{object.id}}";
+    window.location = "/products/{{object.id}}";
   });
 {% endfor %}
 </script>
